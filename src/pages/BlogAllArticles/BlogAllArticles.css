@@ -1,88 +1,16 @@
 /*MOBILE FIRST APPROACH DEFAULT*/
-
-/* Mobile headerAllArticles style */
 .headerAllArticles {
   position: relative;
   padding: 60px 0;
+  color: white;
   display: grid;
   gap: 36px;
-}
-
-.headerAllArticlesGrid {
-  display: grid;
-  gap: var(--space-after-title);
-  padding: 20px;
-}
-
-.headerAllArticles_Title {
-  font-weight: 600;
-}
-
-.introColorsContainer {
-  position: absolute;
-  top: -120px;
-  left: 0;
-  right: 0;
-  bottom: -50%;
-}
-
-.introColorsImg {
-  position: absolute;
-  object-fit: cover;
-  object-position: right bottom;
-  z-index: -5;
-  width: 100%;
-  height: 100%;
-}
-
-.subContentOfheaderAllArticles {
-  display: none;
 }
 
 /* Desktop header style */
 @media only screen and (min-width: 769px) {
   .headerAllArticles {
-    /* grid-template-columns: 2fr 4fr; */
     padding: 100px 60px 40px;
-    .headerAllArticlesGrid {
-      grid-template-columns: 2fr 4fr;
-      width: 1100px; /* size to wrapp content of the page */
-      margin: 0 auto;
-    }
-
-    .introColorsContainer {
-      bottom: 0;
-    }
-
-    .headerAllArticles_Title {
-      text-transform: uppercase;
-      font-size: 68px;
-    }
-
-    .headerAllArticles_Paragraph {
-      text-align: right;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 29px;
-      padding: 0 25px 0 50px;
-    }
-  }
-
-  .subContentOfheaderAllArticles {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-    .subContentOfheaderAllArticles_Title {
-      font-size: 42px;
-      font-weight: 500;
-      line-height: 50px;
-    }
-
-    .headerAllArticles_Paragraph {
-      text-align: left;
-      padding: 0;
-    }
   }
 }
 /* End of header style */
@@ -90,9 +18,14 @@
 /* Mobile bodyAllArticles style */
 .bodyAllArticles {
   font-family: Gotham;
-  padding: 0 20px;
   font-weight: 400;
   z-index: 5;
+  background-color: white;
+  color: black;
+}
+
+.bodyAllArticles_contentWrapper {
+  padding: 0px 60px 40px;
 }
 
 .bodyAllArticles_Title {
@@ -108,22 +41,17 @@
 
 /* Desktop bodyAllArticles style */
 @media only screen and (min-width: 769px) {
-  .bodyAllArticles {
-    width: 1100px; /* size to wrapp content of the page */
-    margin: 0 auto;
-  }
-
-  .bodyAllArticlesWrapper {
-    max-width: 1470px;
-    margin: 0 auto;
-    padding: 30px 45px 0px;
-  }
-
   .bodyAllArticles_Title {
     display: block;
     line-height: 60px;
     font-weight: 600;
     padding-top: 80px;
+  }
+
+  .bodyAllArticles_CardsWrapper {
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 30px 45px 0px;
   }
 }
 /* End of bodyAllArticles style */
