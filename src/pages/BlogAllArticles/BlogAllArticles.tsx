@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from 'react';
 // import Hero from '../../components/Hero/Hero';
 import ArticleCard from '../../components/ArticleCard/ArticleCard';
-// import Pagination from '../../components/Pagination/Pagination';
+import Pagination from '../../components/Pagination/Pagination';
 import { ARTICLES } from '../../utilities/articles/data';
 import type { Article } from '../../utilities/articles/types';
 
@@ -140,11 +140,11 @@ const BlogAllArticles = ({
               })}
             </div>
           </div>
-          {/* <Pagination
+          <Pagination
             currentPage={currentPage}
             numberOfPages={numberOfPages}
             onPaginationChange={handlePaginationChange}
-          /> */}
+          />
         </div>
       </div>
     </div>

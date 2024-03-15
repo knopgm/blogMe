@@ -1,0 +1,55 @@
+button {
+  border: unset;
+}
+
+.btnLeft,
+.btnRight {
+  border-radius: 46px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.pageNumber {
+  background-color: lightgrey;
+  min-width: 33px;
+  display: flex;
+  justify-content: center;
+  height: 95%;
+  align-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.pageNumber_active {
+  min-width: 33px;
+  display: flex;
+  justify-content: center;
+  height: 95%;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile navPageButtons style */
+.navPageArticlesGrid {
+  display: flex;
+  gap: 16px;
+  height: 50px;
+  justify-content: center;
+  padding: 30px 0 76px;
+}
+
+/* Desktop navPageButtons style */
+@media only screen and (min-width: 769px) {
+  .navPageArticlesGrid {
+    padding: 130px 0 138px;
+  }
+}
+/* End of navPageButtons style */
