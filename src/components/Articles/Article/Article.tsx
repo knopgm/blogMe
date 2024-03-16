@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { articles } from '../articles';
 // import { articlesData } from '../../../utilities/articles/data';
 import Hero from '../articlesComponents/Hero/Hero';
+import HighlightedSection from '../articlesComponents/HighlightedSection/HighlightedSection';
 
 import styles from './Articles.module.css';
 
@@ -40,6 +41,8 @@ const Article = () => {
           imgdesktop={article.heroImg.desktop}
           imgmobile={article.heroImg.mobile}
         />
+
+        <HighlightedSection body={article.highlight.body} />
       </article>
     </div>
   );

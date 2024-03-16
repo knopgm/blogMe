@@ -1,0 +1,38 @@
+/* Hightlighted section */
+.backgroundGrey_section {
+  background-color: #fafafa;
+  color: #6d6d6d;
+  padding: 40px 20px 60px;
+}
+
+.icons {
+  display: none;
+  cursor: pointer;
+}
+
+/* Desktop style */
+@media only screen and (min-width: 769px) {
+  .backgroundGrey_session {
+    background-color: #fafafa;
+    color: #6d6d6d;
+    padding: 40px 20px 90px;
+  }
+
+  .titleOrTextIcon_wrapper {
+    display: flex;
+    padding: 70px 0px 40px;
+    max-width: 1110px;
+    margin: 0 auto;
+    gap: 190px;
+  }
+
+  .icons_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .icons {
+    display: block;
+  }
+}
