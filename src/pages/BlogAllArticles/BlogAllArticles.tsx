@@ -1,15 +1,12 @@
 // import type { PropsWithChildren } from 'react';
 import { useEffect, useState, useRef } from 'react';
-// import Hero from '../../components/Hero/Hero';
 import ArticleCard from '../../components/ArticleCard/ArticleCard';
 import Pagination from '../../components/Pagination/Pagination';
 import { ARTICLES } from '../../utilities/articles/data';
 import type { Article } from '../../utilities/articles/types';
+import heroColorfullFrame from './blogAllArticlesImgs/blogAllArticlesIntroFrameColors.svg';
 
 import styles from './BlogAllArticles.module.css';
-
-// const x: Article[] = [];
-// const x: Array<Article> = [];
 
 // This function slices the list of articles to a list hanging on the number of
 function getArticlesForPage(
@@ -33,54 +30,16 @@ type BlogAllArticlesProps = {
   initialPage: number;
 };
 
-/* Example ------------------ */
-// type NameComponentProps = {
-//   name?: string;
-// };
-// type LastNameComponentProps = {
-//   lastName?: string;
-// };
-
-// const DEFAULT_NAME = 'Gabriela';
-// const name = 'Gabriela';
-// const lastName = 'Knop';
-
-// const obj = { name };
-
-// const LastNameComponent = ({ lastName }: LastNameComponentProps) => {
-//   return <p>{lastName}</p>;
-// };
-
-// const NameComponent = ({ name = DEFAULT_NAME }) => {
-//   return <p>{name}</p>;
-// };
-
-/* Example ------------------ */
-
 const BlogAllArticles = ({
   articles = ARTICLES,
   articlesPerPage = 3,
   initialPage = 1,
 }: BlogAllArticlesProps) => {
-  /* to render Example */
-  // return (
-  //   <>
-  //     <div>Blog All Articles</div>
-  //   </>
-  // );
-  /* to render Example */
-
-  // // Temporarely hard coded state -> to be fetch from a server in the future
-  // const [articlesCardList, setArticlesCardList = useState(articles);
   const articlesCardList = articles;
-
-  console.log(articlesCardList);
-  console.log(articlesPerPage);
-  console.log(initialPage);
 
   const [currentPage, setCurrentPage] = useState(initialPage);
   // // a ref to be used on the scrollIntoView method
-  // const headerSectionRef = useRef(null);
+  const headerSectionRef = useRef<HTMLParagraphElement>(null);
   // calls the slice function to have a default list of cards on the page
   const [displayedArticlesList, setDisplayedArticlesList] = useState(() => {
     return getArticlesForPage(currentPage, articlesPerPage, articlesCardList);
@@ -104,10 +63,10 @@ const BlogAllArticles = ({
     }
 
     // Smothly scroll the page up
-    // headerSectionRef.current
-    //   ? headerSectionRef.current?.scrollIntoView()
-    //   : 'undefined';
-    // headerSectionRef.current?.scrollIntoView();
+    headerSectionRef.current
+      ? headerSectionRef.current?.scrollIntoView()
+      : 'undefined';
+    headerSectionRef.current?.scrollIntoView();
 
     // Set the number of the page
     setCurrentPage(pageNumber);
@@ -116,8 +75,33 @@ const BlogAllArticles = ({
   return (
     <div>
       <div className={styles.headerAllArticles}>
-        <h1>hello world</h1>
-        {/* <Hero headerSectionRef={headerSectionRef} /> */}
+        <title>All Articles</title>
+        <div className={styles.introColorsContainer}>
+          <img
+            src={heroColorfullFrame}
+            className={styles.introColorsImg}
+            alt="colourfull-background"
+          />
+        </div>
+        <div className={styles.headerAllArticlesGrid}>
+          <h1 className={styles.headerAllArticles_Title}>Blog</h1>
+          <p className={styles.headerAllArticles_Paragraph}>
+            Get the latest research from industry experts to increase
+            monetization of your existing user base and to retain more of your
+            users on your web or mobile apps.
+          </p>
+          <div className={styles.subContentOfheaderAllArticles}>
+            <h2 className={styles.subContentOfheaderAllArticles_Title}>
+              All articles{' '}
+            </h2>
+            <p
+              ref={headerSectionRef}
+              className={styles.headerAllArticles_Paragraph}
+            >
+              Here's what we've been up to recently.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className={styles.bodyAllArticles}>
