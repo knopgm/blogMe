@@ -1,10 +1,14 @@
 import { Article } from './types';
+import exploringOfferwallCard from './articleCardImgs/exploringOfferwall_Card.png';
+import whatIsAnOfferwallCard from './articleCardImgs/whatIsAnOfferwall_Card.png';
+import maximazingOfferwallCard from './articleCardImgs/maximizingOfferwall_Card.png';
+import temporarelyCard from './articleCardImgs/temporarelyCard.png';
 
 export const ARTICLES: Array<Article> = [
   {
     id: 1,
     key: 'exploringofferwall',
-    image: './images/exploringOfferwall_Card.png',
+    image: exploringOfferwallCard,
     title:
       'Exploring Offerwall Solutions for Monetization and Retention: a Comparative Analysis',
     infos: {
@@ -17,7 +21,7 @@ export const ARTICLES: Array<Article> = [
   {
     id: 2,
     key: 'whatisanofferwall',
-    image: './images/whatIsAnOfferwall_Card.png',
+    image: whatIsAnOfferwallCard,
     title: 'What is an Offerwall?\nExploring the various types and benefits',
     infos: {
       readTime: '8 min',
@@ -29,7 +33,7 @@ export const ARTICLES: Array<Article> = [
   {
     id: 3,
     key: 'maximizingOfferwall',
-    image: './images/maximizingOfferwall_Card.png',
+    image: maximazingOfferwallCard,
     title:
       'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
     infos: {
@@ -42,7 +46,7 @@ export const ARTICLES: Array<Article> = [
   {
     id: 4,
     key: 'article4',
-    image: './images/maximizingOfferwall_Card.png',
+    image: temporarelyCard,
     title:
       'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
     infos: {
@@ -55,7 +59,7 @@ export const ARTICLES: Array<Article> = [
   {
     id: 5,
     key: 'article5',
-    image: './images/maximizingOfferwall_Card.png',
+    image: temporarelyCard,
     title:
       'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
     infos: {
@@ -68,7 +72,7 @@ export const ARTICLES: Array<Article> = [
   {
     id: 6,
     key: 'article6',
-    image: './images/maximizingOfferwall_Card.png',
+    image: temporarelyCard,
     title:
       'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
     infos: {
@@ -81,7 +85,7 @@ export const ARTICLES: Array<Article> = [
   {
     id: 7,
     key: 'article7',
-    image: './images/maximizingOfferwall_Card.png',
+    image: temporarelyCard,
     title:
       'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
     infos: {
