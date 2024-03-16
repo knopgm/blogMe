@@ -29,6 +29,16 @@ select {
   font: inherit;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  border: unset;
+  background: transparent;
+}
+
 ol,
 ul {
   list-style: none;
