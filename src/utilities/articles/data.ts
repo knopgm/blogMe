@@ -39,4 +39,56 @@ export const ARTICLES: Array<Article> = [
     shortDescription: `Leveraging the potential of offerwall monetization can be a game-changer for companies seeking to optimize conversions and increase user retention.In the dynamic landscape of mobile app monetization, offerwall monetization has emerged as a powerful...`,
     readMoreUrl: '/blog/maximizing-offerwall',
   },
+  {
+    id: 4,
+    key: 'article4',
+    image: './images/maximizingOfferwall_Card.png',
+    title:
+      'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
+    infos: {
+      readTime: '8 min',
+      publishedDate: 'Jul 18 2023',
+    },
+    shortDescription: `Leveraging the potential of offerwall monetization can be a game-changer for companies seeking to optimize conversions and increase user retention.In the dynamic landscape of mobile app monetization, offerwall monetization has emerged as a powerful...`,
+    readMoreUrl: '/blog/article4',
+  },
+  {
+    id: 5,
+    key: 'article5',
+    image: './images/maximizingOfferwall_Card.png',
+    title:
+      'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
+    infos: {
+      readTime: '8 min',
+      publishedDate: 'Jul 18 2023',
+    },
+    shortDescription: `Leveraging the potential of offerwall monetization can be a game-changer for companies seeking to optimize conversions and increase user retention.In the dynamic landscape of mobile app monetization, offerwall monetization has emerged as a powerful...`,
+    readMoreUrl: '/blog/article5',
+  },
+  {
+    id: 6,
+    key: 'article6',
+    image: './images/maximizingOfferwall_Card.png',
+    title:
+      'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
+    infos: {
+      readTime: '8 min',
+      publishedDate: 'Jul 18 2023',
+    },
+    shortDescription: `Leveraging the potential of offerwall monetization can be a game-changer for companies seeking to optimize conversions and increase user retention.In the dynamic landscape of mobile app monetization, offerwall monetization has emerged as a powerful...`,
+    readMoreUrl: '/blog/article6',
+  },
+  {
+    id: 7,
+    key: 'article7',
+    image: './images/maximizingOfferwall_Card.png',
+    title:
+      'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
+    infos: {
+      readTime: '8 min',
+      publishedDate: 'Jul 18 2023',
+    },
+    shortDescription: `Leveraging the potential of offerwall monetization can be a game-changer for companies seeking to optimize conversions and increase user retention.In the dynamic landscape of mobile app monetization, offerwall monetization has emerged as a powerful...`,
+    readMoreUrl: '/blog/article7',
+  },
 ];
