@@ -1,5 +1,5 @@
-// import arromLeft from '../../../../../images/Arrow_Left_Circle.svg';
-// import elipse from '../../../../../images/Ellipse.svg';
+import arrowLeft from './images/Arrow_Left_Circle.svg';
+import elipse from './images/Ellipse.svg';
 
 import styles from './Hero.module.css';
 
@@ -20,7 +20,7 @@ const Hero = ({ title, readTime, date, imgdesktop, imgmobile }: HeroProps) => {
             <div className={styles.titleOrTextIcon_wrapper}>
               <img
                 role="button"
-                src={'/images/Arrow_Left_Circle.svg'}
+                src={arrowLeft}
                 className={styles.icons}
                 alt=""
                 onClick={() => {
@@ -46,21 +46,13 @@ const Hero = ({ title, readTime, date, imgdesktop, imgmobile }: HeroProps) => {
           <div className={styles.info_wrapper} data-testid="article-infos">
             <p className={styles.info_readTime}>
               <span className={styles.span_dot}>
-                <img
-                  src={'/images/Ellipse.svg'}
-                  className={styles.elipse}
-                  alt=""
-                />
+                <img src={elipse} className={styles.elipse} alt="" />
                 {readTime} {` read`}
               </span>
             </p>
             <p className={styles.info_publishedDate}>
               <span className={styles.span_dot}>
-                <img
-                  src={'/images/Ellipse.svg'}
-                  className={styles.elipse}
-                  alt=""
-                />
+                <img src={elipse} className={styles.elipse} alt="" />
                 {date}
               </span>
             </p>

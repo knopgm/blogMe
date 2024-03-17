@@ -1,3 +1,6 @@
+import shareIcon from './images/share_grey.svg';
+import printIcon from './images/print.svg';
+
 import styles from './HighlightedSection.module.css';
 
 type HighlightedSectionProps = {
@@ -15,13 +18,13 @@ const HighlightedSection = ({ body }: HighlightedSectionProps) => {
           <div className={styles.icons_wrapper}>
             <img
               role="button"
-              src="/images/share_grey.svg"
+              src={shareIcon}
               className={styles.icons}
               alt=""
             />
             <img
               role="button"
-              src="/images/print.svg"
+              src={printIcon}
               className={styles.icons}
               alt=""
               onClick={() => window.print()}
