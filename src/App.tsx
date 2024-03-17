@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import BlogAllArticles from './pages/BlogAllArticles/BlogAllArticles';
 
 import './App.css';
+import Article from './components/Articles/Article/Article';
 
 function App() {
   const Layout = () => {
@@ -29,6 +30,11 @@ function App() {
           {
             path: AppRoutes.BLOGALLARTICLES,
             element: <BlogAllArticles />,
+            errorElement: <h1>HOME PAGE NOT FOUND</h1>,
+          },
+          {
+            path: AppRoutes.ARTICLE,
+            element: <Article />,
             errorElement: <h1>HOME PAGE NOT FOUND</h1>,
           },
         ],

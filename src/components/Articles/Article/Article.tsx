@@ -1,31 +1,32 @@
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import { articles } from '../articles';
 // import { articlesData } from '../../../utilities/articles/data';
-import Hero from '../articlesComponents/Hero/Hero';
-import HighlightedSection from '../articlesComponents/HighlightedSection/HighlightedSection';
+import Hero from './components/Hero/Hero';
+import HighlightedSection from './components/HighlightedSection/HighlightedSection';
+import PlainSection from './components/PlainSection/PlainSection';
+import Image from './components/Image/Image';
+import SectionList from './components/SectionList/SectionList';
 
 import styles from './Articles.module.css';
+import SectionListWithBulletPoints from './components/SectionListWithBulletPoints/SectionListWithBulletPoints';
 
 const Article = () => {
-  // Hook to navigate to other path
-  const navigate = useNavigate();
-  // Hook to read URL path
-  const { search } = useLocation();
-  // Hook to read only the search Params of the URL -> after the '?'
-  const urlSearchParams = new URLSearchParams(search);
-  // Save the search param in a logical named variable
-  const articleName = urlSearchParams.get('name') as string;
+  // Will read the path from the URL, that is the same as the key property
+  // in each article
+  const { key } = useParams<{ key: string }>();
+
+  const articleName = key;
 
   // Save the specific search Param (in this case: the article name) in the list of articles
   // and use this variable to render all articles dynamically
-  const article = articles[articleName];
+  const article = articleName ? articles[articleName] : undefined;
 
-  useEffect(() => {
-    if (!article) {
-      navigate('/blog-all');
-    }
-  }, [article, navigate]);
+  // useEffect(() => {
+  //   if (!article) {
+  //     navigate('/blog/all');
+  //   }
+  // }, [article, navigate]);
 
   if (!article) {
     return null;
@@ -43,6 +44,58 @@ const Article = () => {
         />
 
         <HighlightedSection body={article.highlight.body} />
+
+        <div className={styles.sectionsWrapper} data-testid="articleContent">
+          {article.content.map((content, index) => {
+            switch (content.type) {
+              case 'plain': {
+                return (
+                  <div
+                    key={`plain-${index}`}
+                    className={styles.pageSize_wrapper}
+                  >
+                    <PlainSection title={content.title} body={content.body} />
+                  </div>
+                );
+              }
+              case 'image': {
+                return (
+                  <Image key={`image-${index}`} sources={content.sources} />
+                );
+              }
+              case 'list': {
+                return (
+                  <div
+                    key={`list-${index}`}
+                    className={styles.pageSize_wrapper}
+                  >
+                    <SectionList
+                      title={content.title}
+                      body={content.body}
+                      subSections={content.subSections}
+                    />
+                  </div>
+                );
+              }
+              case 'listWithBulletPoints': {
+                return (
+                  <div
+                    key={`listWithBulletPoints-${index}`}
+                    className={styles.pageSize_wrapper}
+                  >
+                    <SectionListWithBulletPoints
+                      title={content.title}
+                      body={content.body}
+                      subSections={content.subSections}
+                    />
+                  </div>
+                );
+              }
+              default:
+                return null;
+            }
+          })}
+        </div>
       </article>
     </div>
   );

@@ -1,8 +1,9 @@
+import { ArticleDetails } from '../../utilities/articles/types';
+
 /* Exploring Offerwall Solutions*/
-const exploringOfferWallSolutions = {
-  articleId: 1,
+const exploringOfferWallSolutions: ArticleDetails = {
   id: 1,
-  key: 'exploringofferwall',
+  key: 'exploring-offerwall',
   navbarBackground: true,
   title:
     'Exploring Offerwall Solutions for Monetization and Retention: a Comparative Analysis',
@@ -20,7 +21,6 @@ const exploringOfferWallSolutions = {
   content: [
     {
       type: 'list',
-      title: '',
       subSections: [
         {
           title: 'Smatched',
@@ -65,7 +65,6 @@ const exploringOfferWallSolutions = {
     },
     {
       type: 'plain',
-      title: '',
       body: 'Selecting the right offerwall solution is crucial for mobile app companies seeking effective monetization and user retention. Each solution analyzed — Smatched, Tapjoy, OfferToro, Offerwall, Revu, Wannads, Adscend Media, and AdGem — comes with its unique strengths and weaknesses.\n\nApp companies should carefully evaluate their specific needs, such as global reach, offer variety, user interface, and technical requirements, to make an informed decision. By understanding the differences between these offerwall solutions, mobile app companies can optimize their monetization efforts and enhance user engagement, ultimately driving success in a competitive app market.',
     },
   ],
@@ -73,10 +72,9 @@ const exploringOfferWallSolutions = {
 /* End of Exploring Offerwall Solutions */
 
 /* What Is an Offerwall */
-const whatIsAnOfferWallArticle = {
-  articleId: 2,
+const whatIsAnOfferWallArticle: ArticleDetails = {
   id: 2,
-  key: 'whatisanofferwall',
+  key: 'what-is-an-offerwall',
   navbarBackground: false,
   title: 'What is an Offerwall?\nExploring the various types and benefits',
   heroImg: {
@@ -164,10 +162,9 @@ const whatIsAnOfferWallArticle = {
 /* End of WhatIsAnOfferWallArticle */
 
 /* Maximazing Offerwall */
-const maximizingOfferwall = {
-  articleId: 3,
+const maximizingOfferwall: ArticleDetails = {
   id: 3,
-  key: 'maximizingofferwall',
+  key: 'maximizing-offerwall',
   navbarBackground: false,
   title:
     'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
@@ -268,7 +265,6 @@ const maximizingOfferwall = {
     },
     {
       type: 'plain',
-      title: '',
       body: 'Offerwall monetization presents an immense opportunity for mobile app companies to generate revenue and foster user engagement. By seamlessly integrating the offerwall, optimizing offer selection, fine-tuning the reward system, and personalizing the user experience, companies can increase conversions and enhance user retention. Implementing these best practices ensures a positive user experience, builds trust, and creates a win-win scenario for app developers, advertisers, and users. Embrace the potential of offerwall monetization, and unlock the key to sustainable app monetization success.',
     },
   ],
@@ -279,8 +275,7 @@ const maximizingOfferwall = {
 /* ******** */
 /* End of your new article object */
 
-/* Exporting all article objects here: */
-export const articles = {
+export const articles: { [key: string]: ArticleDetails } = {
   [exploringOfferWallSolutions.key]: exploringOfferWallSolutions,
   [whatIsAnOfferWallArticle.key]: whatIsAnOfferWallArticle,
   [maximizingOfferwall.key]: maximizingOfferwall,
