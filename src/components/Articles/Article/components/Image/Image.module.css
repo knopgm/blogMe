@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 30px 0 30px 20px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.wrapper img {
+  width: 100%;
+  max-width: 1350px;
+}
+
+/* Desktop style */
+@media only screen and (min-width: 769px) {
+  .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 15%;
+  }
+}
