@@ -1,4 +1,16 @@
 import { ArticleDetails } from '../../utilities/articles/types';
+import heroImg_exploringOfferwall from './articlesImages/exploringOfferwallImgs/ExploringOfferwall_Hero_Img.svg';
+import heroImg_exploringOfferwall_mobile from './articlesImages/exploringOfferwallImgs/allArticleleft2.png';
+import exploringOfferwall_Img from './articlesImages/exploringOfferwallImgs/ExploringOfferwall_Img.png';
+import exploringOfferwall_Img_mobile from './articlesImages/exploringOfferwallImgs/ExploringOferwall_Img_mobile.png';
+import heroImg_whatIsAnOfferwall from './articlesImages/whatIsAnOfferwallImgs/whatIsAnOfferwall_Hero_Img.png';
+import heroImg_whatIsAnOfferwall_mobile from './articlesImages/whatIsAnOfferwallImgs/whatIsAnOfferwall_Hero_Img_mobile.png';
+import whatIsAnOfferwall_Img from './articlesImages/whatIsAnOfferwallImgs/whatIsAnOfferwall_Img.png';
+import whatIsAnOfferwall_Img_mobile from './articlesImages/whatIsAnOfferwallImgs/whatIsAnOfferwall_Img_mobile.png';
+import heroImg_maximizingOfferwall from './articlesImages/maximazingOfferwallImgs/MaximizingOfferwall_Hero_Img.png';
+import heroImg_maximizingOfferwall_mobile from './articlesImages/maximazingOfferwallImgs/MaximizingOfferwall_Hero_Img_mobile.png';
+import maximizingOfferwall_Img from './articlesImages/maximazingOfferwallImgs/MaximizingOfferwall_Img.svg';
+import maximizingOfferwall_Img_mobile from './articlesImages/maximazingOfferwallImgs/MaximizingOfferwall_Img_mobile.png';
 
 /* Exploring Offerwall Solutions*/
 const exploringOfferWallSolutions: ArticleDetails = {
@@ -8,8 +20,8 @@ const exploringOfferWallSolutions: ArticleDetails = {
   title:
     'Exploring Offerwall Solutions for Monetization and Retention: a Comparative Analysis',
   heroImg: {
-    desktop: '/images/ExploringOfferwall_Hero_Img.svg',
-    mobile: '/images/allArticleleft2.png',
+    desktop: heroImg_exploringOfferwall,
+    mobile: heroImg_exploringOfferwall_mobile,
   },
   metadata: {
     readTime: '7 min',
@@ -59,8 +71,8 @@ const exploringOfferWallSolutions: ArticleDetails = {
     {
       type: 'image',
       sources: {
-        desktop: '/images/ExploringOfferwall_Img.png',
-        mobile: '/images/ExploringOferwall_Img_mobile.png',
+        desktop: exploringOfferwall_Img,
+        mobile: exploringOfferwall_Img_mobile,
       },
     },
     {
@@ -78,8 +90,8 @@ const whatIsAnOfferWallArticle: ArticleDetails = {
   navbarBackground: false,
   title: 'What is an Offerwall?\nExploring the various types and benefits',
   heroImg: {
-    desktop: '/images/whatIsAnOfferwall_Hero_Img.png',
-    mobile: '/images/whatIsAnOfferwall_Hero_Img_mobile.png',
+    desktop: heroImg_whatIsAnOfferwall,
+    mobile: heroImg_whatIsAnOfferwall_mobile,
   },
   metadata: {
     readTime: '8 min',
@@ -123,8 +135,8 @@ const whatIsAnOfferWallArticle: ArticleDetails = {
     {
       type: 'image',
       sources: {
-        desktop: '/images/whatIsAnOfferwall_Img.png',
-        mobile: '/images/whatIsAnOfferwall_Img_mobile.png',
+        desktop: whatIsAnOfferwall_Img,
+        mobile: whatIsAnOfferwall_Img_mobile,
       },
     },
     {
@@ -169,8 +181,8 @@ const maximizingOfferwall: ArticleDetails = {
   title:
     'Maximizing Offerwall Monetization: Best Practices for Conversions and Retention',
   heroImg: {
-    desktop: '/images/MaximizingOfferwall_Hero_Img.png',
-    mobile: '/images/MaximizingOfferwall_Hero_Img_mobile.png',
+    desktop: heroImg_maximizingOfferwall,
+    mobile: heroImg_maximizingOfferwall_mobile,
   },
   metadata: {
     readTime: '8 min',
@@ -259,8 +271,8 @@ const maximizingOfferwall: ArticleDetails = {
     {
       type: 'image',
       sources: {
-        desktop: '/images/MaximizingOfferwall_Img.svg',
-        mobile: '/images/MaximizingOfferwall_Img_mobile.png',
+        desktop: maximizingOfferwall_Img,
+        mobile: maximizingOfferwall_Img_mobile,
       },
     },
     {
