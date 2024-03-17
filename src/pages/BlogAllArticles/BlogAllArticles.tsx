@@ -27,7 +27,7 @@ function getArticlesForPage(
 type BlogAllArticlesProps = {
   articles?: Array<Article>;
   articlesPerPage?: number;
-  initialPage: number;
+  initialPage?: number;
 };
 
 const BlogAllArticles = ({
