@@ -21,15 +21,16 @@
   .titleOrTextIcon_wrapper {
     display: flex;
     padding: 70px 0px 40px;
-    max-width: 1110px;
+    /* max-width: 1110px; */
     margin: 0 auto;
-    gap: 190px;
+    gap: 164px;
   }
 
   .icons_wrapper {
     display: flex;
     flex-direction: column;
     gap: 45px;
+    width: 400px;
   }
 
   .icons {

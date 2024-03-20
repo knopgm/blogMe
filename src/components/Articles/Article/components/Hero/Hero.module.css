@@ -12,12 +12,12 @@
   left: 0;
   top: 0;
   z-index: -1;
+}
 
-  .heroImg {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
+.heroImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .icons {
@@ -43,6 +43,7 @@
   padding: 30px 20px 55px;
   gap: 40px;
   color: #4b4b4b;
+  background-color: white;
 }
 
 .span_dot {
@@ -61,7 +62,7 @@
   .headerWrapper {
     padding-top: 500px;
     margin: 0 auto;
-    max-width: 1920px;
+    /* max-width: 1920px; */
   }
 
   .heroWhiteBackground_right {
@@ -70,19 +71,27 @@
 
   .heroSizeWithIcons_wrapper {
     margin: 0 auto;
-    padding-left: 195px;
+    padding-left: 20px;
   }
 
   .titleOrTextIcon_wrapper {
     display: flex;
     padding: 70px 0px 40px;
-    max-width: 1110px;
+    /* max-width: 1110px; */
     margin: 0 auto;
-    gap: 190px;
+    gap: 15%;
+    align-items: center;
+  }
+  .icon_hero_wrapper {
+    width: 200px;
   }
 
   .icons {
     display: block;
+  }
+
+  .icons img {
+    width: unset;
   }
 
   .heroTitle_wrapper {
@@ -104,7 +113,7 @@
   /* Info section Desktop */
   .pageSize_wrapper {
     padding-left: 265px;
-    max-width: 1110px;
+    /* max-width: 1110px; */
     margin: 0 auto;
   }
 

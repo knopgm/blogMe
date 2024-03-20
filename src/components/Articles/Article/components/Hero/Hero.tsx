@@ -18,16 +18,18 @@ const Hero = ({ title, readTime, date, imgdesktop, imgmobile }: HeroProps) => {
         <div className={styles.heroWhiteBackground_right}>
           <div className={styles.heroSizeWithIcons_wrapper}>
             <div className={styles.titleOrTextIcon_wrapper}>
-              <img
-                role="button"
-                src={arrowLeft}
-                className={styles.icons}
-                alt=""
-                onClick={() => {
-                  window.history.back();
-                }}
-                data-testid="btn-goBack"
-              />
+              <div className={styles.icon_hero_wrapper}>
+                <img
+                  role="button"
+                  src={arrowLeft}
+                  className={styles.icons}
+                  alt=""
+                  onClick={() => {
+                    window.history.back();
+                  }}
+                  data-testid="btn-goBack"
+                />
+              </div>
               <div className={styles.heroTitle_wrapper}>
                 <h1 className={styles.heroTitle}>{title}</h1>
               </div>
