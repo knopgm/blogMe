@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import TextTruncate from 'react-text-truncate';
+import CardInfos from '../CardInfos/CardInfos';
 
 import styles from './ArticleCard.module.css';
 
@@ -34,9 +35,7 @@ const ArticleCard = ({
             >
               {title}
             </h1>
-            <div className={styles.articlesInfo}>
-              <div>{readTime} read</div> <div>{publishedDate}</div>
-            </div>
+            <CardInfos readTime={readTime} publishedDate={publishedDate} />
             {/* You can change how many lines the cards will display at line=() below */}
 
             <TextTruncate line={3} element="p" text={shortDescription} />

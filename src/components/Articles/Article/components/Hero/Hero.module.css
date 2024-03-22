@@ -23,6 +23,7 @@
 .icons {
   display: none;
   cursor: pointer;
+  max-height: 70px;
 }
 
 .heroWhiteBackground_right {

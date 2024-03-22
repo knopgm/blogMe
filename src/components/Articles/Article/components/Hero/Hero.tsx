@@ -1,5 +1,5 @@
 import arrowLeft from './images/Arrow_Left_Circle.svg';
-import elipse from './images/Ellipse.svg';
+import CardInfos from '../../../../CardInfos/CardInfos';
 
 import styles from './Hero.module.css';
 
@@ -45,20 +45,7 @@ const Hero = ({ title, readTime, date, imgdesktop, imgmobile }: HeroProps) => {
           </picture>
         </div>
         <div className={styles.pageSize_wrapper}>
-          <div className={styles.info_wrapper} data-testid="article-infos">
-            <p className={styles.info_readTime}>
-              <span className={styles.span_dot}>
-                <img src={elipse} className={styles.elipse} alt="" />
-                {readTime} {` read`}
-              </span>
-            </p>
-            <p className={styles.info_publishedDate}>
-              <span className={styles.span_dot}>
-                <img src={elipse} className={styles.elipse} alt="" />
-                {date}
-              </span>
-            </p>
-          </div>
+          <CardInfos readTime={readTime} publishedDate={date} />
         </div>
       </header>
     </>

@@ -1,0 +1,11 @@
+.CardInfo {
+  display: flex;
+  gap: 25px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.span_dot {
+  display: flex;
+  gap: 10px;
+}
