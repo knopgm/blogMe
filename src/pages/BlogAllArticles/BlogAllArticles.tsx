@@ -5,6 +5,7 @@ import Pagination from '../../components/Pagination/Pagination';
 import { ARTICLES } from '../../utilities/articles/data';
 import type { Article } from '../../utilities/articles/types';
 import heroColorfullFrame from './blogAllArticlesImgs/blogAllArticlesIntroFrameColors.svg';
+import { Container } from '../../components/Container/Container';
 
 import styles from './BlogAllArticles.module.css';
 
@@ -83,54 +84,58 @@ const BlogAllArticles = ({
             alt="colourfull-background"
           />
         </div>
-        <div className={styles.headerAllArticlesGrid}>
-          <h1 className={styles.headerAllArticles_Title}>Blog</h1>
-          <p className={styles.headerAllArticles_Paragraph}>
-            Get the latest research from industry experts to increase
-            monetization of your existing user base and to retain more of your
-            users on your web or mobile apps.
-          </p>
-          <div className={styles.subContentOfheaderAllArticles}>
-            <h2 className={styles.subContentOfheaderAllArticles_Title}>
-              All articles{' '}
-            </h2>
-            <p
-              ref={headerSectionRef}
-              className={styles.headerAllArticles_Paragraph}
-            >
-              Here's what we've been up to recently.
+        <Container>
+          <div className={styles.headerAllArticlesGrid}>
+            <h1 className={styles.headerAllArticles_Title}>Blog</h1>
+            <p className={styles.headerAllArticles_Paragraph}>
+              Get the latest research from industry experts to increase
+              monetization of your existing user base and to retain more of your
+              users on your web or mobile apps.
             </p>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.bodyAllArticles}>
-        <h1 className={styles.bodyAllArticles_Title}>More Articles</h1>
-        <div className={styles.bodyAllArticlesWrapper}>
-          <div className={styles.articlesCardsGrid}>
-            <div className={styles.articlesCardsGrid}>
-              {displayedArticlesList?.map((article) => {
-                return (
-                  <ArticleCard
-                    key={article.key}
-                    image={article.image}
-                    title={article.title}
-                    readTime={article.infos.readTime}
-                    publishedDate={article.infos.publishedDate}
-                    shortDescription={article.shortDescription}
-                    readMoreUrl={article.readMoreUrl}
-                  />
-                );
-              })}
+            <div className={styles.subContentOfheaderAllArticles}>
+              <h2 className={styles.subContentOfheaderAllArticles_Title}>
+                All articles{' '}
+              </h2>
+              <p
+                ref={headerSectionRef}
+                className={styles.headerAllArticles_Paragraph}
+              >
+                Here's what we've been up to recently.
+              </p>
             </div>
           </div>
-          <Pagination
-            currentPage={currentPage}
-            numberOfPages={numberOfPages}
-            onPaginationChange={handlePaginationChange}
-          />
-        </div>
+        </Container>
       </div>
+
+      <Container>
+        <div className={styles.bodyAllArticles}>
+          <h1 className={styles.bodyAllArticles_Title}>More Articles</h1>
+          <div className={styles.bodyAllArticlesWrapper}>
+            <div className={styles.articlesCardsGrid}>
+              <div className={styles.articlesCardsGrid}>
+                {displayedArticlesList?.map((article) => {
+                  return (
+                    <ArticleCard
+                      key={article.key}
+                      image={article.image}
+                      title={article.title}
+                      readTime={article.infos.readTime}
+                      publishedDate={article.infos.publishedDate}
+                      shortDescription={article.shortDescription}
+                      readMoreUrl={article.readMoreUrl}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+            <Pagination
+              currentPage={currentPage}
+              numberOfPages={numberOfPages}
+              onPaginationChange={handlePaginationChange}
+            />
+          </div>
+        </div>
+      </Container>
     </div>
   );
 };

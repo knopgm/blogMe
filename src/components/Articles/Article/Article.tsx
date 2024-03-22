@@ -9,6 +9,7 @@ import SectionList from './components/SectionList/SectionList';
 import SectionListWithBulletPoints from './components/SectionListWithBulletPoints/SectionListWithBulletPoints';
 import ReadNextArticleCard from '../../ReadNextArticleCards/ReadNextArticleCards';
 import { getNextArticles } from '../../../utilities/getNextArticles';
+import { Container } from '../../Container/Container';
 
 import styles from './Articles.module.css';
 
@@ -42,57 +43,59 @@ const Article = () => {
 
         <HighlightedSection body={article.highlight.body} />
 
-        <div className={styles.sectionsWrapper} data-testid="articleContent">
-          {article.content.map((content, index) => {
-            switch (content.type) {
-              case 'plain': {
-                return (
-                  <div
-                    key={`plain-${index}`}
-                    className={styles.pageSize_wrapper}
-                  >
-                    <PlainSection title={content.title} body={content.body} />
-                  </div>
-                );
+        <Container>
+          <div className={styles.sectionsWrapper} data-testid="articleContent">
+            {article.content.map((content, index) => {
+              switch (content.type) {
+                case 'plain': {
+                  return (
+                    <div
+                      key={`plain-${index}`}
+                      className={styles.pageSize_wrapper}
+                    >
+                      <PlainSection title={content.title} body={content.body} />
+                    </div>
+                  );
+                }
+                case 'image': {
+                  return (
+                    <Image key={`image-${index}`} sources={content.sources} />
+                  );
+                }
+                case 'list': {
+                  return (
+                    <div
+                      key={`list-${index}`}
+                      className={styles.pageSize_wrapper}
+                    >
+                      <SectionList
+                        title={content.title}
+                        body={content.body}
+                        subSections={content.subSections}
+                      />
+                    </div>
+                  );
+                }
+                case 'listWithBulletPoints': {
+                  return (
+                    <div
+                      key={`listWithBulletPoints-${index}`}
+                      className={styles.pageSize_wrapper}
+                    >
+                      <SectionListWithBulletPoints
+                        title={content.title}
+                        body={content.body}
+                        subSections={content.subSections}
+                      />
+                    </div>
+                  );
+                }
+                default:
+                  return null;
               }
-              case 'image': {
-                return (
-                  <Image key={`image-${index}`} sources={content.sources} />
-                );
-              }
-              case 'list': {
-                return (
-                  <div
-                    key={`list-${index}`}
-                    className={styles.pageSize_wrapper}
-                  >
-                    <SectionList
-                      title={content.title}
-                      body={content.body}
-                      subSections={content.subSections}
-                    />
-                  </div>
-                );
-              }
-              case 'listWithBulletPoints': {
-                return (
-                  <div
-                    key={`listWithBulletPoints-${index}`}
-                    className={styles.pageSize_wrapper}
-                  >
-                    <SectionListWithBulletPoints
-                      title={content.title}
-                      body={content.body}
-                      subSections={content.subSections}
-                    />
-                  </div>
-                );
-              }
-              default:
-                return null;
-            }
-          })}
-        </div>
+            })}
+          </div>
+        </Container>
       </article>
       <div className={styles.whatToReadNext_wrapper}>
         <h1
@@ -101,21 +104,23 @@ const Article = () => {
         >
           What to read next
         </h1>
-        <div className={styles.whatToReadNextCards_wrapper}>
-          {nextArticles.map((article) => {
-            return (
-              <ReadNextArticleCard
-                key={article.id}
-                image={article.image}
-                title={article.title}
-                readTime={article.infos.readTime}
-                publishedDate={article.infos.publishedDate}
-                text={article.shortDescription}
-                readMoreUrl={article.readMoreUrl}
-              />
-            );
-          })}
-        </div>
+        <Container>
+          <div className={styles.whatToReadNextCards_wrapper}>
+            {nextArticles.map((article) => {
+              return (
+                <ReadNextArticleCard
+                  key={article.id}
+                  image={article.image}
+                  title={article.title}
+                  readTime={article.infos.readTime}
+                  publishedDate={article.infos.publishedDate}
+                  text={article.shortDescription}
+                  readMoreUrl={article.readMoreUrl}
+                />
+              );
+            })}
+          </div>
+        </Container>
       </div>
     </div>
   );

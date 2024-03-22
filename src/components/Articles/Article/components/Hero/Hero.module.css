@@ -39,17 +39,15 @@
 }
 
 /* Info section */
-.info_wrapper {
+.whiteBackground_wrapper {
+  background-color: white;
+}
+.heroCardInfos_wrapper {
   display: flex;
   padding: 30px 20px 55px;
   gap: 40px;
   color: #4b4b4b;
   background-color: white;
-}
-
-.span_dot {
-  display: flex;
-  gap: 10px;
 }
 
 /* Desktop style */
@@ -75,12 +73,12 @@
     padding-left: 20px;
   }
 
-  .titleOrTextIcon_wrapper {
+  .titleIcon_wrapper {
     display: flex;
-    padding: 70px 0px 40px;
+    padding: 70px 0px 40px 120px;
     /* max-width: 1110px; */
     margin: 0 auto;
-    gap: 15%;
+    gap: 132px;
     align-items: center;
   }
   .icon_hero_wrapper {
@@ -118,7 +116,7 @@
     margin: 0 auto;
   }
 
-  .info_wrapper {
+  .heroCardInfos_wrapper {
     padding: 30px 0px 80px 0px;
   }
 }
