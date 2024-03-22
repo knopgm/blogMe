@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0px 2.682px 12.739px 0px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
 }
 
 .cardImage {
@@ -43,11 +44,12 @@
 .btnReadMore {
   background-color: #a18129;
   color: white;
-  padding: 16px 43px;
+  padding: 12px 36px;
   max-width: 210px;
   margin: 0 auto;
   font-weight: bold;
   cursor: pointer;
+  font-size: 14px;
 }
 
 /* Desktop ArticleCard style */
