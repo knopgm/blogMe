@@ -11,6 +11,7 @@ import SectionListWithBulletPoints from './components/SectionListWithBulletPoint
 import ReadNextArticleCard from '../../ReadNextArticleCards/ReadNextArticleCards';
 import { getNextArticles } from '../../../utilities/getNextArticles';
 import { Container } from '../../Container/Container';
+import { Helmet } from 'react-helmet';
 
 import styles from './Articles.module.css';
 
@@ -37,6 +38,11 @@ const Article = () => {
 
   return (
     <div data-testid={`article-wrapper`}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{article.key}</title>
+        <link rel="canonical" href="https://www.knopgm.com" />
+      </Helmet>
       <article className={styles.articleWrapper}>
         <Hero
           title={article.title}

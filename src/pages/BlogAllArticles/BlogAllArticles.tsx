@@ -6,6 +6,7 @@ import { ARTICLES } from '../../utilities/articles/data';
 import type { Article } from '../../utilities/articles/types';
 import heroColorfullFrame from './blogAllArticlesImgs/blogAllArticlesIntroFrameColors.svg';
 import { Container } from '../../components/Container/Container';
+import { Helmet } from 'react-helmet';
 
 import styles from './BlogAllArticles.module.css';
 
@@ -76,7 +77,12 @@ const BlogAllArticles = ({
   return (
     <div>
       <div className={styles.headerAllArticles}>
-        <title>All Articles</title>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>All Articles</title>
+          <link rel="canonical" href="https://www.knopgm.com" />
+        </Helmet>
+
         <div className={styles.introColorsContainer}>
           <img
             src={heroColorfullFrame}

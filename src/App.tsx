@@ -4,6 +4,7 @@ import {
   Outlet,
   Navigate,
 } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { AppRoutes } from './routes/AppRoutes';
 import BlogAllArticles from './pages/BlogAllArticles/BlogAllArticles';
 
@@ -14,6 +15,7 @@ function App() {
   const Layout = () => {
     return (
       <div id="root" className="app_wrapper">
+        <Helmet />
         <Outlet />
       </div>
     );
