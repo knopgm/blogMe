@@ -5,6 +5,10 @@
   /* padding: 40px 20px 60px; */
 }
 
+.textIcon_wrapper {
+  padding: 40px 20px;
+}
+
 .icons {
   display: none;
   cursor: pointer;
@@ -21,7 +25,6 @@
   .textIcon_wrapper {
     display: flex;
     padding: 70px 0px 40px 30px;
-    /* max-width: 1110px; */
     margin: 0 auto;
     gap: 164px;
   }

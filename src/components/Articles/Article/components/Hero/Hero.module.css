@@ -1,8 +1,16 @@
 /* Page Hero */
+.headerWrapper img {
+  max-width: unset;
+}
+
 .headerWrapper {
   position: relative;
-  padding-top: 170px;
+  padding-top: 235px;
   margin-top: -50px;
+}
+
+.heroImg img {
+  max-width: 100%;
 }
 
 .heroImgcontainer {
@@ -22,7 +30,7 @@
 
 .titleIcon_wrapper {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   margin: 0 auto;
   align-items: center;
 }
@@ -68,9 +76,9 @@
   }
 
   .headerWrapper {
-    padding-top: 500px;
+    padding-top: 835px;
     margin: 0 auto;
-    /* max-width: 1920px; */
+    max-width: 1920px;
   }
 
   .heroWhiteBackground_right {
