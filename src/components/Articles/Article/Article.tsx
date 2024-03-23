@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { articles } from '../articles';
 import { ARTICLES } from '../../../utilities/articles/data';
@@ -23,6 +24,10 @@ const Article = () => {
   // Save the specific search Param (in this case: the article name) in the
   // list of articles and use this variable to render all articles dynamically
   const article = articleName ? articles[articleName] : undefined;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [articleName]);
 
   if (!article) {
     return null;
