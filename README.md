@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# BlogMe - Full feature for online Articles
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![BlogMe](./src/assets/BlogMe.png)
 
-Currently, two official plugins are available:
+With this feature, the user's can add their own articles in a styled and full functional online articles app.
+The user just need to fill up the article infos into a 'articles.ts' and 'data.ts' object files.
+The app have pagination, navigation between pages and styles including fotos ready to render with any text!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to use it
 
-## Expanding the ESLint configuration
+Install the projet locally in your computer by typing the following in your terminal:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then, run it with the comand:
+
+```
+npm run dev
+```
+
+Or you can just check it on it's public adress at:
+
+-[Blog-Gkm]()
+
+## How to test it
+
+Tests are the next step for this project.
+It will be comming up soon...
+
+## Technologies applied
+
+- Typescript
+- React
