@@ -1,6 +1,10 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  Navigate,
+} from 'react-router-dom';
 import { AppRoutes } from './routes/AppRoutes';
-import Home from './pages/Home/Home';
 import BlogAllArticles from './pages/BlogAllArticles/BlogAllArticles';
 
 import './App.css';
@@ -18,15 +22,9 @@ function App() {
   const router = createBrowserRouter(
     [
       {
-        path: AppRoutes.MAIN,
         element: <Layout />,
         errorElement: <h1>PAGE NOT FOUND</h1>,
         children: [
-          {
-            path: AppRoutes.MAIN,
-            element: <Home />,
-            errorElement: <h1>HOME PAGE NOT FOUND</h1>,
-          },
           {
             path: AppRoutes.BLOGALLARTICLES,
             element: <BlogAllArticles />,
@@ -36,6 +34,10 @@ function App() {
             path: AppRoutes.ARTICLE,
             element: <Article />,
             errorElement: <h1>HOME PAGE NOT FOUND</h1>,
+          },
+          {
+            path: '*',
+            element: <Navigate to={AppRoutes.BLOGALLARTICLES} replace />,
           },
         ],
       },
