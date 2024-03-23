@@ -22,7 +22,7 @@ npm run dev
 
 Or you can just check it on it's public adress at:
 
--[Blog-Gkm]()
+- [Blog-Gkm](https://blog-gkm.netlify.app/blog/all)
 
 ## How to test it
 
@@ -33,3 +33,10 @@ It will be comming up soon...
 
 - Typescript
 - React
+- react-text-truncate
+- react-helmet
+- react-router-dom
+
+---
+
+> [My Portfolio](https://knopgm.com/)
