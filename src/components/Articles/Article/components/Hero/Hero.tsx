@@ -36,7 +36,13 @@ const Hero = ({ title, readTime, date, imgdesktop, imgmobile }: HeroProps) => {
                     onClick={() => {
                       window.history.back();
                     }}
+                    onKeyDown={(e) => {
+                      if (e.keyCode === 13) {
+                        window.history.back();
+                      }
+                    }}
                     data-testid="btn-goBack"
+                    tabIndex={0}
                   />
                 </div>
                 <div className={styles.heroTitle_wrapper}>

@@ -34,10 +34,12 @@ const ReadNextArticleCard = ({
           <TextTruncate line={4} element="p" text={text} />
         </div>
         <div className={styles.readNextCardBtnReadMore_wrapper}>
-          <Link to={readMoreUrl}>
-            <button className={styles.readNextCardBtnReadMore}>
-              READ MORE
-            </button>
+          <Link
+            to={readMoreUrl}
+            role="button"
+            className={styles.readNextCardBtnReadMore}
+          >
+            READ MORE
           </Link>
         </div>
       </div>

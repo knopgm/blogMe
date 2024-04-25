@@ -23,6 +23,7 @@ const HighlightedSection = ({ body }: HighlightedSectionProps) => {
                 src={shareIcon}
                 className={styles.icons}
                 alt=""
+                tabIndex={0}
               />
               <img
                 role="button"
@@ -30,6 +31,12 @@ const HighlightedSection = ({ body }: HighlightedSectionProps) => {
                 className={styles.icons}
                 alt=""
                 onClick={() => window.print()}
+                onKeyDown={(e) => {
+                  if (e.keyCode === 13) {
+                    window.print();
+                  }
+                }}
+                tabIndex={0}
               />
             </div>
 
