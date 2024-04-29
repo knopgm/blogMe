@@ -1,8 +1,8 @@
 import { Article } from './types';
-import exploringOfferwallCard from './articleCardImgs/exploringOfferwall_Card.png';
-import whatIsAnOfferwallCard from './articleCardImgs/whatIsAnOfferwall_Card.png';
-import maximazingOfferwallCard from './articleCardImgs/maximizingOfferwall_Card.png';
-import temporarelyCard from './articleCardImgs/temporarelyCard.png';
+import exploringOfferwallCard from './articleCardImgs/exploringOfferwall_Card.webp';
+import whatIsAnOfferwallCard from './articleCardImgs/whatIsAnOfferwall_Card.webp';
+import maximazingOfferwallCard from './articleCardImgs/maximizingOfferwall_Card.webp';
+import temporarelyCard from './articleCardImgs/temporarelyCard.webp';
 
 export const ARTICLES: Array<Article> = [
   {
